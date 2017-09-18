@@ -1,5 +1,9 @@
 
-# 1 "HardwareReset.c"
+# 1 "tasks.c"
+
+# 15 "tasks.h"
+void InitTasks(void);
+void MainTasks(void);
 
 # 26 "C:\Program Files\Microchip\xc8\v1.41\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -14938,52 +14942,13 @@ void OSCILLATOR_Initialize(void);
 void HardwareResetMEF_ini( void );
 void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF );
 
-# 15 "HardwareReset.c"
-extern uint8_t Timer1Ticked;
-int16_t Ticked;
-
-typedef enum
+# 5 "tasks.c"
+void InitTasks(void)
 {
-HardwarePowerON,
-HardwarePowerOFF
-}t_HardwarePowerMEF;
-
-t_HardwarePowerMEF HardwarePowerState;
-
-void HardwareResetMEF_ini( void )
-{
-HardwarePowerState = HardwarePowerON;
-Ticked = 0;
+HardwareResetMEF_ini();
 }
 
-void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF )
+void MainTasks(void)
 {
-if (Timer1Ticked == 1)
-{
-Ticked++;
-}
-switch (HardwarePowerState){
-case HardwarePowerON:
-if (Ticked == DelayON)
-{
-do { LATAbits.LATA2 = 1; } while(0);
-do { LATCbits.LATC0 = 1; } while(0);
-do { LATCbits.LATC1 = 0; } while(0);
-do { LATCbits.LATC2 = 0; } while(0);
-
-HardwarePowerState = HardwarePowerOFF;
-}
-break;
-case HardwarePowerOFF:
-if (Ticked == DelayOFF)
-{
-do { LATAbits.LATA2 = 0; } while(0);
-do { LATAbits.LATA2 = 0; } while(0);
-do { LATCbits.LATC1 = 1; } while(0);
-do { LATCbits.LATC1 = 1; } while(0);
-
-HardwarePowerState = HardwarePowerON;
-}
-break;
-}
+HardwareResetMEF_act( 30, 60 );
 }

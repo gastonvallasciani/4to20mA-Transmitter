@@ -9,12 +9,8 @@
 //#include "mcc.h"
 #include "HardwareReset.h"
 #include "mcc_generated_files/mcc.h"
+#include "properties.h"
 
-#define _30seg 30;
-#define _1min 60;
-#define _10min 600;
-#define _1h 3600;
-#define _12min 43200;
 
 extern uint8_t Timer1Ticked;
 int16_t Ticked;
@@ -35,8 +31,6 @@ void HardwareResetMEF_ini( void )
 
 void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF )
 {   
-    //uint16_t DelayON = _1min; 
-    //uint8_t DelayOFF = _30seg;
     if (Timer1Ticked == 1)
     {
         Ticked++;
@@ -44,24 +38,22 @@ void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF )
     switch (HardwarePowerState){
         case HardwarePowerON:
             if (Ticked == DelayON)
-            //if (Ticked == 60)
             {
-                RELAY_OUTPUT1_SetHigh();
-                RELAY_OUTPUT2_SetHigh(); 
-                TRI_STATE_OUTPUT1_SetLow();
-                TRI_STATE_OUTPUT2_SetLow();
+                RELAY1ON();
+                RELAY2ON(); 
+                TRI_STATE1ON();
+                TRI_STATE2ON();
                 
                 HardwarePowerState = HardwarePowerOFF;
             }
             break;
         case HardwarePowerOFF:
             if (Ticked == DelayOFF)
-            //if (Ticked == 30)
             {
-                RELAY_OUTPUT1_SetLow();
-                RELAY_OUTPUT2_SetLow();
-                TRI_STATE_OUTPUT1_SetHigh();
-                TRI_STATE_OUTPUT2_SetHigh();
+                RELAY1OFF();
+                RELAY2OFF();
+                TRI_STATE1OFF();
+                TRI_STATE2OFF();
                 
                 HardwarePowerState = HardwarePowerON;
             }

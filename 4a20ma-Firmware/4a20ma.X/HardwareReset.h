@@ -11,7 +11,6 @@
 #include "mcc_generated_files/mcc.h"
 
 
-
 ////////////////////Protoype Functions
 void HardwareResetMEF_ini( void );
 void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF );

@@ -14934,26 +14934,31 @@ void SYSTEM_Initialize(void);
 # 87
 void OSCILLATOR_Initialize(void);
 
-# 16 "HardwareReset.h"
+# 15 "HardwareReset.h"
 void HardwareResetMEF_ini( void );
 void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF );
 
-# 22 "main.c"
+# 15 "tasks.h"
+void InitTasks(void);
+void MainTasks(void);
+
+# 24 "main.c"
 void main(void)
 {
 
 SYSTEM_Initialize();
+InitTasks();
 
-# 31
+
+
+
 (INTCONbits.GIE = 1);
-
-
 (INTCONbits.PEIE = 1);
 
 # 42
 while (1)
 {
-HardwareResetMEF_act( 30, 60 );
+MainTasks();
 }
 }
 

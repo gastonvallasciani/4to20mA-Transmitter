@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F1619 ]
 [d frameptr 6 ]
-"99 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
+"99 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
 [e E11985 . `uc
 TMR2_ROP_STARTS_TMRON 0
 TMR2_ROP_STARTS_TMRON_ERSHIGH 1
@@ -45,7 +45,7 @@ TMR2_LC4_OUT 12
 TMR2_PWM3_OUT 13
 TMR2_PWM4_OUT 14
 ]
-"119 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
+"119 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
 [e E11987 . `uc
 I2C_SLAVE_WRITE_REQUEST 0
 I2C_SLAVE_READ_REQUEST 1
@@ -57,7 +57,7 @@ I2C_SLAVE_READ_COMPLETED 3
 SLAVE_NORMAL_DATA 0
 SLAVE_DATA_ADDRESS 1
 ]
-"28 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\HardwareReset.c
+"24 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\HardwareReset.c
 [e E12132 . `uc
 HardwarePowerON 0
 HardwarePowerOFF 1
@@ -66,31 +66,33 @@ HardwarePowerOFF 1
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files\Microchip\xc8\v1.41\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"36 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\HardwareReset.c
+"26 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\HardwareReset.c
+[v _HardwareResetMEF_ini HardwareResetMEF_ini `(v  1 e 1 0 ]
+"32
 [v _HardwareResetMEF_act HardwareResetMEF_act `(v  1 e 1 0 ]
-"22 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\main.c
+"24 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"55 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/eusart.c
+"55 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
-"81 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
+"81 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 "104
 [v _I2C_ISR I2C_ISR `(v  1 e 1 0 ]
 "168
 [v _I2C_StatusCallback I2C_StatusCallback `(v  1 e 1 0 ]
-"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/interrupt_manager.c
+"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"76 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/mcc.c
+"76 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "89
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pin_manager.c
+"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm3.c
+"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
-"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm4.c
+"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm4.c
 [v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
-"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
+"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "95
 [v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
@@ -102,7 +104,7 @@ HardwarePowerOFF 1
 [v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
 "193
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
-"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
+"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "110
 [v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
@@ -120,6 +122,10 @@ HardwarePowerOFF 1
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 "184
 [v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"5 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\tasks.c
+[v _InitTasks InitTasks `(v  1 e 1 0 ]
+"10
+[v _MainTasks MainTasks `(v  1 e 1 0 ]
 [s S728 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -314,7 +320,7 @@ HardwarePowerOFF 1
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "2569
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S923 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S925 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -322,13 +328,13 @@ HardwarePowerOFF 1
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2584
-[u S930 . 1 `S923 1 . 1 0 ]
-[v _LATAbits LATAbits `VES930  1 e 1 @268 ]
+[u S932 . 1 `S925 1 . 1 0 ]
+[v _LATAbits LATAbits `VES932  1 e 1 @268 ]
 "2618
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2656
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S940 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S942 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -338,8 +344,8 @@ HardwarePowerOFF 1
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2673
-[u S949 . 1 `S940 1 . 1 0 ]
-[v _LATCbits LATCbits `VES949  1 e 1 @270 ]
+[u S951 . 1 `S942 1 . 1 0 ]
+[v _LATCbits LATCbits `VES951  1 e 1 @270 ]
 "3256
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "3302
@@ -492,31 +498,31 @@ HardwarePowerOFF 1
 [v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
 "28786
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"20 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\HardwareReset.c
+"16 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\HardwareReset.c
 [v _Ticked Ticked `i  1 e 2 0 ]
-"28
+"24
 [v _HardwarePowerState HardwarePowerState `E12132  1 e 1 0 ]
-"62 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
+"62 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
 [v _I2C_slaveWriteData I2C_slaveWriteData `VEuc  1 e 1 0 ]
-"56 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
+"56 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
 "57
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
 "155
 [v _Timer1Ticked Timer1Ticked `uc  1 e 1 0 ]
-"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
+"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
 [v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
-"22 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\main.c
+"24 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "46
 } 0
-"76 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/mcc.c
+"76 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "87
 } 0
-"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
+"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "96
@@ -532,7 +538,7 @@ HardwarePowerOFF 1
 [v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
 "182
 } 0
-"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
+"63 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
 "93
@@ -548,51 +554,66 @@ HardwarePowerOFF 1
 [v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
 "191
 } 0
-"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm4.c
+"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm4.c
 [v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
 {
 "72
 } 0
-"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm3.c
+"57 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
 {
 "72
 } 0
-"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pin_manager.c
+"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "94
 [v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
 "115
 } 0
-"89 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/mcc.c
+"89 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "97
 } 0
-"81 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
+"81 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 {
 "102
 } 0
-"55 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/eusart.c
+"55 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "74
 } 0
-"36 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\HardwareReset.c
+"10 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\tasks.c
+[v _MainTasks MainTasks `(v  1 e 1 0 ]
+{
+"13
+} 0
+"32 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\HardwareReset.c
 [v _HardwareResetMEF_act HardwareResetMEF_act `(v  1 e 1 0 ]
 {
 [v HardwareResetMEF_act@DelayON DelayON `ui  1 p 2 0 ]
 [v HardwareResetMEF_act@DelayOFF DelayOFF `uc  1 p 1 2 ]
-"70
+"62
 } 0
-"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/interrupt_manager.c
+"5 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\tasks.c
+[v _InitTasks InitTasks `(v  1 e 1 0 ]
+{
+"8
+} 0
+"26 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\HardwareReset.c
+[v _HardwareResetMEF_ini HardwareResetMEF_ini `(v  1 e 1 0 ]
+{
+"30
+} 0
+"51 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "70
 } 0
-"167 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
+"167 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
 {
 "177
@@ -602,7 +623,7 @@ HardwarePowerOFF 1
 {
 "187
 } 0
-"157 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
+"157 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/tmr1.c
 [v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
 {
 "159
@@ -619,7 +640,7 @@ HardwarePowerOFF 1
 {
 "196
 } 0
-"104 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
+"104 C:\Users\Ariel L\Desktop\Gastón\4-20mA\4to20mA-Transmitter\4a20ma-Firmware\4a20ma.X\mcc_generated_files/i2c.c
 [v _I2C_ISR I2C_ISR `(v  1 e 1 0 ]
 {
 "106

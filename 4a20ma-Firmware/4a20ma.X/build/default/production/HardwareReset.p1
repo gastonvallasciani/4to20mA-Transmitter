@@ -1,8 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"28 HardwareReset.c
+"24 HardwareReset.c
 [c E12132 0 1 .. ]
 [n E12132 . HardwarePowerON HardwarePowerOFF  ]
-"19
+"15
 [v _Timer1Ticked `uc ~T0 @X0 0 e ]
 "2575 C:\Program Files\Microchip\xc8\v1.41\include\pic16f1619.h
 [s S132 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -10905,173 +10905,173 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart.h: 134: void EUSART_Write(uint8_t txData);
 [; ;mcc.h: 74: void SYSTEM_Initialize(void);
 [; ;mcc.h: 87: void OSCILLATOR_Initialize(void);
-[; ;HardwareReset.h: 16: void HardwareResetMEF_ini( void );
-[; ;HardwareReset.h: 17: void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF );
-[; ;HardwareReset.c: 19: extern uint8_t Timer1Ticked;
-"20 HardwareReset.c
+[; ;HardwareReset.h: 15: void HardwareResetMEF_ini( void );
+[; ;HardwareReset.h: 16: void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF );
+[; ;HardwareReset.c: 15: extern uint8_t Timer1Ticked;
+"16 HardwareReset.c
 [v _Ticked `i ~T0 @X0 1 e ]
-[; ;HardwareReset.c: 20: int16_t Ticked;
-[; ;HardwareReset.c: 22: typedef enum
-[; ;HardwareReset.c: 23: {
-[; ;HardwareReset.c: 24: HardwarePowerON,
-[; ;HardwareReset.c: 25: HardwarePowerOFF
-[; ;HardwareReset.c: 26: }t_HardwarePowerMEF;
-"28
+[; ;HardwareReset.c: 16: int16_t Ticked;
+[; ;HardwareReset.c: 18: typedef enum
+[; ;HardwareReset.c: 19: {
+[; ;HardwareReset.c: 20: HardwarePowerON,
+[; ;HardwareReset.c: 21: HardwarePowerOFF
+[; ;HardwareReset.c: 22: }t_HardwarePowerMEF;
+"24
 [v _HardwarePowerState `E12132 ~T0 @X0 1 e ]
-[; ;HardwareReset.c: 28: t_HardwarePowerMEF HardwarePowerState;
-"30
+[; ;HardwareReset.c: 24: t_HardwarePowerMEF HardwarePowerState;
+"26
 [v _HardwareResetMEF_ini `(v ~T0 @X0 1 ef ]
-"31
+"27
 {
-[; ;HardwareReset.c: 30: void HardwareResetMEF_ini( void )
-[; ;HardwareReset.c: 31: {
+[; ;HardwareReset.c: 26: void HardwareResetMEF_ini( void )
+[; ;HardwareReset.c: 27: {
 [e :U _HardwareResetMEF_ini ]
 [f ]
-[; ;HardwareReset.c: 32: HardwarePowerState = HardwarePowerON;
-"32
+[; ;HardwareReset.c: 28: HardwarePowerState = HardwarePowerON;
+"28
 [e = _HardwarePowerState . `E12132 0 ]
-[; ;HardwareReset.c: 33: Ticked = 0;
-"33
+[; ;HardwareReset.c: 29: Ticked = 0;
+"29
 [e = _Ticked -> 0 `i ]
-[; ;HardwareReset.c: 34: }
-"34
+[; ;HardwareReset.c: 30: }
+"30
 [e :UE 1211 ]
 }
-"36
+"32
 [v _HardwareResetMEF_act `(v ~T0 @X0 1 ef2`ui`uc ]
-"37
+"33
 {
-[; ;HardwareReset.c: 36: void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF )
-[; ;HardwareReset.c: 37: {
+[; ;HardwareReset.c: 32: void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF )
+[; ;HardwareReset.c: 33: {
 [e :U _HardwareResetMEF_act ]
-"36
+"32
 [v _DelayON `ui ~T0 @X0 1 r1 ]
 [v _DelayOFF `uc ~T0 @X0 1 r2 ]
-"37
+"33
 [f ]
-[; ;HardwareReset.c: 40: if (Timer1Ticked == 1)
-"40
+[; ;HardwareReset.c: 34: if (Timer1Ticked == 1)
+"34
 [e $ ! == -> _Timer1Ticked `i -> 1 `i 1213  ]
+[; ;HardwareReset.c: 35: {
+"35
+{
+[; ;HardwareReset.c: 36: Ticked++;
+"36
+[e ++ _Ticked -> 1 `i ]
+"37
+}
+[e :U 1213 ]
+[; ;HardwareReset.c: 37: }
+[; ;HardwareReset.c: 38: switch (HardwarePowerState){
+"38
+[e $U 1215  ]
+{
+[; ;HardwareReset.c: 39: case HardwarePowerON:
+"39
+[e :U 1216 ]
+[; ;HardwareReset.c: 40: if (Ticked == DelayON)
+"40
+[e $ ! == -> _Ticked `ui _DelayON 1217  ]
 [; ;HardwareReset.c: 41: {
 "41
 {
-[; ;HardwareReset.c: 42: Ticked++;
+[; ;HardwareReset.c: 42: do { LATAbits.LATA2 = 1; } while(0);
 "42
-[e ++ _Ticked -> 1 `i ]
-"43
-}
-[e :U 1213 ]
-[; ;HardwareReset.c: 43: }
-[; ;HardwareReset.c: 44: switch (HardwarePowerState){
-"44
-[e $U 1215  ]
-{
-[; ;HardwareReset.c: 45: case HardwarePowerON:
-"45
-[e :U 1216 ]
-[; ;HardwareReset.c: 46: if (Ticked == DelayON)
-"46
-[e $ ! == -> _Ticked `ui _DelayON 1217  ]
-[; ;HardwareReset.c: 48: {
-"48
-{
-[; ;HardwareReset.c: 49: do { LATAbits.LATA2 = 1; } while(0);
-"49
 [e :U 1220 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1219 ]
-[; ;HardwareReset.c: 50: do { LATCbits.LATC0 = 1; } while(0);
-"50
+[; ;HardwareReset.c: 43: do { LATCbits.LATC0 = 1; } while(0);
+"43
 [e :U 1223 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 1222 ]
-[; ;HardwareReset.c: 51: do { LATCbits.LATC1 = 0; } while(0);
-"51
+[; ;HardwareReset.c: 44: do { LATCbits.LATC1 = 0; } while(0);
+"44
 [e :U 1226 ]
 {
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 }
 [e :U 1225 ]
-[; ;HardwareReset.c: 52: do { LATCbits.LATC2 = 0; } while(0);
-"52
+[; ;HardwareReset.c: 45: do { LATCbits.LATC2 = 0; } while(0);
+"45
 [e :U 1229 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1228 ]
-[; ;HardwareReset.c: 54: HardwarePowerState = HardwarePowerOFF;
-"54
+[; ;HardwareReset.c: 47: HardwarePowerState = HardwarePowerOFF;
+"47
 [e = _HardwarePowerState . `E12132 1 ]
-"55
+"48
 }
 [e :U 1217 ]
-[; ;HardwareReset.c: 55: }
-[; ;HardwareReset.c: 56: break;
-"56
+[; ;HardwareReset.c: 48: }
+[; ;HardwareReset.c: 49: break;
+"49
 [e $U 1214  ]
-[; ;HardwareReset.c: 57: case HardwarePowerOFF:
-"57
+[; ;HardwareReset.c: 50: case HardwarePowerOFF:
+"50
 [e :U 1230 ]
-[; ;HardwareReset.c: 58: if (Ticked == DelayOFF)
-"58
+[; ;HardwareReset.c: 51: if (Ticked == DelayOFF)
+"51
 [e $ ! == _Ticked -> _DelayOFF `i 1231  ]
-[; ;HardwareReset.c: 60: {
-"60
+[; ;HardwareReset.c: 52: {
+"52
 {
-[; ;HardwareReset.c: 61: do { LATAbits.LATA2 = 0; } while(0);
-"61
+[; ;HardwareReset.c: 53: do { LATAbits.LATA2 = 0; } while(0);
+"53
 [e :U 1234 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1233 ]
-[; ;HardwareReset.c: 62: do { LATCbits.LATC0 = 0; } while(0);
-"62
+[; ;HardwareReset.c: 54: do { LATAbits.LATA2 = 0; } while(0);
+"54
 [e :U 1237 ]
 {
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1236 ]
-[; ;HardwareReset.c: 63: do { LATCbits.LATC1 = 1; } while(0);
-"63
+[; ;HardwareReset.c: 55: do { LATCbits.LATC1 = 1; } while(0);
+"55
 [e :U 1240 ]
 {
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 1239 ]
-[; ;HardwareReset.c: 64: do { LATCbits.LATC2 = 1; } while(0);
-"64
+[; ;HardwareReset.c: 56: do { LATCbits.LATC1 = 1; } while(0);
+"56
 [e :U 1243 ]
 {
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 1242 ]
-[; ;HardwareReset.c: 66: HardwarePowerState = HardwarePowerON;
-"66
+[; ;HardwareReset.c: 58: HardwarePowerState = HardwarePowerON;
+"58
 [e = _HardwarePowerState . `E12132 0 ]
-"67
+"59
 }
 [e :U 1231 ]
-[; ;HardwareReset.c: 67: }
-[; ;HardwareReset.c: 68: break;
-"68
+[; ;HardwareReset.c: 59: }
+[; ;HardwareReset.c: 60: break;
+"60
 [e $U 1214  ]
-"69
+"61
 }
-[; ;HardwareReset.c: 69: }
+[; ;HardwareReset.c: 61: }
 [e $U 1214  ]
-"44
+"38
 [e :U 1215 ]
 [e [\ _HardwarePowerState , $ . `E12132 0 1216
  , $ . `E12132 1 1230
  1214 ]
-"69
+"61
 [e :U 1214 ]
-[; ;HardwareReset.c: 70: }
-"70
+[; ;HardwareReset.c: 62: }
+"62
 [e :UE 1212 ]
 }

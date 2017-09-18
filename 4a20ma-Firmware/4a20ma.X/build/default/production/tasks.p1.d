@@ -1,11 +1,10 @@
- build/default/production/main.d  \
- build/default/production/main.p1:  \
- main.c  \
+ build/default/production/tasks.d  \
+ build/default/production/tasks.p1:  \
+ tasks.c  \
 mcc_generated_files/i2c.h  \
 mcc_generated_files/mcc.h  \
 mcc_generated_files/pwm3.h  \
 mcc_generated_files/pwm4.h  \
-properties.h  \
 tasks.h  \
 mcc_generated_files/interrupt_manager.h  \
 mcc_generated_files/tmr1.h  \

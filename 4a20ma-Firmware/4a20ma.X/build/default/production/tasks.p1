@@ -1,22 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"74 mcc_generated_files/mcc.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"15 tasks.h
-[v _InitTasks `(v ~T0 @X0 0 ef ]
-"341 C:\Program Files\Microchip\xc8\v1.41\include\pic16f1619.h
-[s S26 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S26 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"351
-[s S27 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S27 . . T0IF . T0IE ]
-"340
-[u S25 `S26 1 `S27 1 ]
-[n S25 . . . ]
-"358
-[v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
-"16 tasks.h
-[v _MainTasks `(v ~T0 @X0 0 ef ]
+"15 HardwareReset.h
+[v _HardwareResetMEF_ini `(v ~T0 @X0 0 ef ]
+"16
+[v _HardwareResetMEF_act `(v ~T0 @X0 0 ef2`ui`uc ]
+[; ;tasks.h: 15: void InitTasks(void);
+[; ;tasks.h: 16: void MainTasks(void);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10904,45 +10892,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 87: void OSCILLATOR_Initialize(void);
 [; ;HardwareReset.h: 15: void HardwareResetMEF_ini( void );
 [; ;HardwareReset.h: 16: void HardwareResetMEF_act ( uint16_t DelayON, uint8_t DelayOFF );
-[; ;tasks.h: 15: void InitTasks(void);
-[; ;tasks.h: 16: void MainTasks(void);
-"24 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"25
+"5 tasks.c
+[v _InitTasks `(v ~T0 @X0 1 ef ]
+"6
 {
-[; ;main.c: 24: void main(void)
-[; ;main.c: 25: {
-[e :U _main ]
+[; ;tasks.c: 5: void InitTasks(void)
+[; ;tasks.c: 6: {
+[e :U _InitTasks ]
 [f ]
-[; ;main.c: 27: SYSTEM_Initialize();
-"27
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 28: InitTasks();
-"28
-[e ( _InitTasks ..  ]
-[; ;main.c: 33: (INTCONbits.GIE = 1);
-"33
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 34: (INTCONbits.PEIE = 1);
-"34
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 42: while (1)
-"42
-[e :U 1213 ]
-[; ;main.c: 43: {
-"43
-{
-[; ;main.c: 44: MainTasks();
-"44
-[e ( _MainTasks ..  ]
-"45
-}
-[e :U 1212 ]
-"42
-[e $U 1213  ]
-[e :U 1214 ]
-[; ;main.c: 45: }
-[; ;main.c: 46: }
-"46
+[; ;tasks.c: 7: HardwareResetMEF_ini();
+"7
+[e ( _HardwareResetMEF_ini ..  ]
+[; ;tasks.c: 8: }
+"8
 [e :UE 1211 ]
+}
+"10
+[v _MainTasks `(v ~T0 @X0 1 ef ]
+"11
+{
+[; ;tasks.c: 10: void MainTasks(void)
+[; ;tasks.c: 11: {
+[e :U _MainTasks ]
+[f ]
+[; ;tasks.c: 12: HardwareResetMEF_act( 30, 60 );
+"12
+[e ( _HardwareResetMEF_act (2 , -> -> 30 `i `ui -> -> 60 `i `uc ]
+[; ;tasks.c: 13: }
+"13
+[e :UE 1212 ]
 }
